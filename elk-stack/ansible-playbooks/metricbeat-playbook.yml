@@ -18,9 +18,11 @@
 
   - name: setup mbeat
     command: metricbeat setup
-    
+
+  - name: start mbeat
+    command: service metricbeat start
+
   - name: enable at boot
     systemd:
       name: metricbeat
       enabled: yes
-~                      

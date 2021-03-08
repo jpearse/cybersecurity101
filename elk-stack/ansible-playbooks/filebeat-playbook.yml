@@ -4,11 +4,9 @@
   become: yes
   tasks:
 
-  - name: download filebeat deb file
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
-
-  - name: install filebeat deb
-    command: dpkg -i filebeat-7.6.1-amd64.deb
+  - name: Install filebeat deb package from internet
+    apt:
+      deb: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
 
   - name: drop fbeat yml to webservers
     copy:
@@ -28,4 +26,4 @@
     systemd:
       name: filebeat
       enabled: yes
-~                      
+~                             
