@@ -44,8 +44,8 @@ The machines on the internal network are not exposed to the public Internet.
 
 Machines with external access allowed are restricted to the public IP address `120.159.55.141`, and connections only allowed on specific ports:
 
-	* The jump box is limited to public SSH on port 22
-	* The ELK server and load balancer are limited to public HTTP on port 80
+* The jump box is limited to public SSH on port 22
+* The ELK server and load balancer are limited to public HTTP on port 80
 
 Machines within the network can only be accessed via SSH by the jump host from `10.0.0.4`
 
